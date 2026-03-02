@@ -19,8 +19,9 @@ var task = /** @class */ (function () {
         taskDoneButton.classList.add("individual_task_boolean", "individual_task_button");
         taskDoneButton.textContent = this.done ? "done" : "not done";
         taskDoneButton.addEventListener("click", function () {
-            _this.done = true;
+            _this.done = !_this.done;
             taskDoneButton.textContent = _this.done ? "done" : "not done";
+            taskDoneButton.style.backgroundColor = _this.done ? "rgb(32, 209, 35)" : "rgb(100, 216, 236)";
         });
         var taskTimeStamp = document.createElement("p");
         taskTimeStamp.classList.add("individual_task_date");
