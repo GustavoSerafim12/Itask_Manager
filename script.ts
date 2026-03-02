@@ -28,8 +28,9 @@ class task{
         taskDoneButton.textContent = this.done ? "done" : "not done";
 
         taskDoneButton.addEventListener("click", () => {
-            this.done = true;
+            this.done = !this.done;
             taskDoneButton.textContent = this.done ? "done" : "not done";
+            taskDoneButton.style.backgroundColor = this.done ? "rgb(32, 209, 35)" :  "rgb(100, 216, 236)";
         });
 
         const taskTimeStamp = document.createElement("p");
